@@ -34,7 +34,8 @@ class App {
   private errorHandler(err, _, res: express.Response): void {
     const message = this.errorResponse(err.status)
     const status = err.status ? err.status : 500
-    res.status(status).send({status: false, response: message})
+    res.status(status)
+      .send({status: false, response: message})
   }
 
   /**

@@ -9,7 +9,9 @@ export const logger = new winston.Logger({
             const name = process.env.APP_NAME
             let localMeta = JSON.parse(JSON.stringify(meta))
             if (localMeta) {
-                if (Array.isArray(localMeta)) localMeta = {lastParamArray: localMeta}
+                if (Array.isArray(localMeta)) {
+                    localMeta = {lastParamArray: localMeta}
+                }
             } else {
                 localMeta = {}
             }
@@ -17,8 +19,9 @@ export const logger = new winston.Logger({
             return localMeta
         }
     ],
-    timestamp: function () {
-        return (moment().format('YYYY-MM-DD HH:mm:ss'))
+    timestamp: () => {
+       return moment()
+          .format('YYYY-MM-DD HH:mm:ss')
     },
     transports: [
         new winston.transports.Console({
