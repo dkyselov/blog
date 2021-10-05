@@ -1,0 +1,29 @@
+{
+  "extends": "tslint-config-standard",
+  "defaultSeverity": "error",
+  "rules": {
+    "space-before-function-paren": {
+      "options": [
+        {
+          "named": "never",
+          "method": "never",
+          "anonymous": "never",
+          "asyncArrow": "never",
+          "constructor": "never"
+        }
+      ]
+    },
+    "curly": true,
+    "eofline": true,
+    "trailing-comma": false,
+    "comment-format": true,
+    "cyclomatic-complexity": [
+      true,
+      5
+    ],
+    "no-unused-variable": true,
+    "arrow-return-shorthand": true,
+    "no-trailing-whitespace": true,
+    "newline-per-chained-call": true
+  }
+}

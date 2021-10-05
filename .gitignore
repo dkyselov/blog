@@ -1,0 +1,6 @@
+# Project Artifacts
+.env
+*.zip
+
+# IDE
+.idea/
